@@ -13,6 +13,12 @@ docker run -it \
   -p 9090:9090 \
   ibmcom/datapower
 
+ 5. configurar app web del datapower
+    configure; web-mgmt 0 9090 9090;
+ 6. guardar cambios 
+    write mem
+ 7. salir -> exit
+ 8. luego se puede iniciar con docker-compose 
 
 
 
