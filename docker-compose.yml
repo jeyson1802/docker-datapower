@@ -1,0 +1,14 @@
+version: '2'
+services:
+   datapower:
+     image: ibmcom/datapower
+     environment:
+      - DP_WEB_MGMT=true
+      - DATAPOWER_ACCEPT_LICENSE=true
+      - DATAPOWER_INTERACTIVE=true
+      - DATAPOWER_WORKER_THREADS=4
+     volumes:
+      - $PWD/config:/drouter/config
+      - $PWD/local:/drouter/local
+     ports:
+      - 9090:9090
